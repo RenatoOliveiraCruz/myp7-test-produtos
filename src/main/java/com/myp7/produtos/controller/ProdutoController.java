@@ -20,7 +20,7 @@ public class ProdutoController {
         return repository.findByDescricaoContainingIgnoreCase(descricao);
     }
 
-    @GetMapping("/{id}")
+    @PostMapping("/{id}")
     public Produto buscar(@PathVariable Integer id) {
         return repository.findById(id).orElse(null);
 }
