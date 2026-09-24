@@ -1,38 +1,52 @@
-# Teste Técnico - Cadastro de Produtos
+# Teste Técnico — Cadastro de Produtos
 
-API REST + frontend simples para cadastrar, listar e filtrar produtos.
+Aplicação web para gerenciamento de produtos, desenvolvida como parte de um teste técnico de desenvolvimento **Backend + Frontend**.
 
-## Tecnologias
-Java 17, Spring Boot, Spring Data JPA, H2 (em memória), Lombok, HTML e JavaScript.
+A solução disponibiliza uma **API RESTful** para operações de CRUD de produtos, persistência utilizando **Spring Data JPA + H2** e uma interface web integrada à API para cadastro, listagem e filtragem por descrição.
 
-## Como rodar
-Precisa do JDK 17+. Na raiz do projeto:
+## 🌐 Aplicação
 
-```bash
-./mvnw spring-boot:run
-```
+**Demo:** https://SEU-LINK-RAILWAY
 
-(no Windows: `mvnw.cmd spring-boot:run`). Ou rode a classe `ProdutosApplication` pela IDE.
+**Repositório:** https://github.com/RenatoOliveiraCruz/myp7-test-produtos
 
-Abrir no navegador: http://localhost:8080
+---
 
-Os dados ficam em memória e somem quando a aplicação para.
+## 🛠️ Tecnologias
 
-## Endpoints
-| Método | Rota | Descrição |
-|--------|------|-----------|
-| GET | /produtos | Lista os produtos |
-| GET | /produtos?descricao=arroz | Filtra pela descrição |
-| GET | /produtos/{id} | Busca por id |
-| POST | /produtos | Cadastra |
-| PUT | /produtos/{id} | Atualiza |
-| DELETE | /produtos/{id} | Exclui |
+### Backend
+- Java 17
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- H2 Database
+- Lombok
+- Maven
 
-Exemplo de POST:
-```json
-{
-  "descricao": "Arroz",
-  "codigoFabricante": "ARZ001",
-  "embalagens": [{ "tipoEmbalagem": "Caixa", "quantidade": "10" }]
-}
-```
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+- Fetch API
+
+---
+
+## 🏗️ Arquitetura
+
+A aplicação utiliza uma arquitetura simples, organizada em camadas, mantendo a responsabilidade de cada componente bem definida.
+
+```text
+Frontend
+   │
+   │ HTTP / REST
+   ▼
+ProdutoController
+   │
+   ▼
+ProdutoRepository
+   │
+   ▼
+Spring Data JPA / Hibernate
+   │
+   ▼
+H2 Database
