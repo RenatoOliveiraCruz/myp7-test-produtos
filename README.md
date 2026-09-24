@@ -38,3 +38,34 @@ mvnw.cmd spring-boot:run
 
 # Linux/macOS
 ./mvnw spring-boot:run
+```
+Também é possível executar a classe `ProdutosApplication` pela IDE.
+
+Após iniciar, acesse:
+
+http://localhost:8080
+
+## API
+
+| Método | Endpoint | Descrição |
+|---|---|---|
+| GET | `/produtos` | Lista os produtos |
+| GET | `/produtos?descricao=arroz` | Filtra por descrição |
+| GET | `/produtos/{id}` | Busca por ID |
+| POST | `/produtos` | Cadastra um produto |
+| PUT | `/produtos/{id}` | Atualiza um produto |
+| DELETE | `/produtos/{id}` | Exclui um produto |
+
+## Exemplo de cadastro
+
+```json
+{
+  "descricao": "Arroz",
+  "codigoFabricante": "ARZ001",
+  "embalagens": [
+    {
+      "tipoEmbalagem": "Caixa",
+      "quantidade": "10"
+    }
+  ]
+}
