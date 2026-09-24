@@ -9,6 +9,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/produtos")
 public class ProdutoController {
+
     @Autowired
     private ProdutoRepository repository;
 
@@ -20,14 +21,19 @@ public class ProdutoController {
         return repository.findByDescricaoContainingIgnoreCase(descricao);
     }
 
-    @PostMapping("/{id}")
+    @GetMapping("/{id}")
     public Produto buscar(@PathVariable Integer id) {
         return repository.findById(id).orElse(null);
-}
+    }
+
+    @PostMapping
+    public Produto criar(@RequestBody Produto produto) {
+        return repository.save(produto);
+    }
 
     @PutMapping("/{id}")
     public Produto atualizar(@PathVariable Integer id, @RequestBody Produto dados) {
-        Produto produto = repostory.findById(id).orElse(null);
+        Produto produto = repository.findById(id).orElse(null);
         if (produto == null) {
             return null;
         }
@@ -37,7 +43,7 @@ public class ProdutoController {
     }
 
     @DeleteMapping("/{id}")
-    public void deletar(@PathVariable Integer id) {
+    public void excluir(@PathVariable Integer id) {
         repository.deleteById(id);
     }
 }
