@@ -1,6 +1,6 @@
 # Teste Técnico - Cadastro de Produtos
 
-Aplicação para cadastro, consulta e filtro de produtos, desenvolvida para o teste técnico.
+Aplicação para cadastro, consulta e filtro de produtos, desenvolvida para o teste técnico da MYP7.
 
 ## Aplicação
 
