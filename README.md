@@ -6,7 +6,7 @@ A solução disponibiliza uma **API RESTful** para operações de CRUD de produt
 
 ## 🌐 Aplicação
 
-**Demo:** https://SEU-LINK-RAILWAY
+**Demo:** myp7-test-produtos-production.up.railway.app
 
 **Repositório:** https://github.com/RenatoOliveiraCruz/myp7-test-produtos
 
