@@ -1,52 +1,40 @@
-# Teste Técnico — Cadastro de Produtos
+# Teste Técnico - Cadastro de Produtos
 
-Aplicação web para gerenciamento de produtos, desenvolvida como parte de um teste técnico de desenvolvimento **Backend + Frontend**.
+Aplicação para cadastro, consulta e filtro de produtos, desenvolvida para o teste técnico.
 
-A solução disponibiliza uma **API RESTful** para operações de CRUD de produtos, persistência utilizando **Spring Data JPA + H2** e uma interface web integrada à API para cadastro, listagem e filtragem por descrição.
+## Aplicação
 
-## 🌐 Aplicação
+A aplicação está disponível em:
 
-**Demo:** myp7-test-produtos-production.up.railway.app
+https://myp7-test-produtos-production.up.railway.app/
 
-**Repositório:** https://github.com/RenatoOliveiraCruz/myp7-test-produtos
+## Tecnologias
 
----
-
-## 🛠️ Tecnologias
-
-### Backend
 - Java 17
 - Spring Boot
 - Spring Data JPA
-- Hibernate
-- H2 Database
+- H2
 - Lombok
+- HTML
+- JavaScript
 - Maven
 
-### Frontend
-- HTML5
-- CSS3
-- JavaScript
-- Fetch API
+## Funcionalidades
 
----
+- Cadastro de produtos
+- Listagem de produtos
+- Busca por descrição
+- Consulta de produto por ID
+- Atualização de produtos pela API
+- Exclusão de produtos pela API
 
-## 🏗️ Arquitetura
+## Como executar
 
-A aplicação utiliza uma arquitetura simples, organizada em camadas, mantendo a responsabilidade de cada componente bem definida.
+É necessário ter o JDK 17 ou superior.
 
-```text
-Frontend
-   │
-   │ HTTP / REST
-   ▼
-ProdutoController
-   │
-   ▼
-ProdutoRepository
-   │
-   ▼
-Spring Data JPA / Hibernate
-   │
-   ▼
-H2 Database
+```bash
+# Windows
+mvnw.cmd spring-boot:run
+
+# Linux/macOS
+./mvnw spring-boot:run
